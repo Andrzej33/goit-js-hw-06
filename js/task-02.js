@@ -19,11 +19,11 @@ const ingredients = [
   'Condiments',
 ];
 
-const ingredientsList = document.querySelector(`#ingredients`);
-console.log(ingredientsList)
-// const ingredientEl = document.createElement(`li`);
-// ingredientEl.classList.add(`item`);
+// Створюємо посилання на список в HTML файлі
 
+const ingredientsList = document.querySelector(`#ingredients`);
+
+// Прописуємо функцію для створення елементів списку
 
 const ingredientsAdd = ingredients.map((ingredient) => {
   const ingredientEl = document.createElement(`li`);
@@ -33,7 +33,7 @@ const ingredientsAdd = ingredients.map((ingredient) => {
 }
     )
   ;
-console.dir(ingredientsAdd);
-  
 
-// ingredientsList.appendChild([...ingredientsAdd]);
+// Додаємо список в HTML файл за одну операцію
+
+ingredientsList.append(...ingredientsAdd);
