@@ -29,7 +29,7 @@ const galeryElList = document.querySelector(`.gallery`);
 const makeGaleryImages = properties => {
   return properties.map(property => {
 
-    return `<li><img class = "images-03" src = "${property.url}" alt = "${property.alt}" ></img></li>`
+    return `<li><img class = "images-03" src = "${property.url}" alt = "${property.alt}" "width = 300" height = 200" ></img></li>`
     
   });
   
