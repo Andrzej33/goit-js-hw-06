@@ -17,20 +17,56 @@ const refs = {
  destroyBtn :
   document.querySelector('button[data-destroy]'),
  collection :
-  document.querySelector('#controls'),
+  document.querySelector('#boxes'),
 }
 
 
 
-refs.input.addEventListener('input', (event) => {
-  const amountBoxes = event.currentTarget.value
+refs.input.addEventListener('input', () => {
+  // const number = event.currentTarget.value
+  // return number
  });
 
+// let amount = refs.input.value;
 
 
 
-refs.createBtn.addEventListener('click', () => { });
-refs.destroyBtn.addEventListener('click', () => { });
+
+refs.createBtn.addEventListener('click',createBoxes);
+
+
+function createBoxes(amount)  {
+  const boxes = [];
+  
+ 
+
+  for (let i = 0; i < amount; i += 1) {
+
+    const div = document.createElement('div');
+
+
+
+  div.style.backgroundColor = getRandomHexColor();
+  div.style.height = `${30 + 10 * i}px`;
+  div.style.width = `${30 + 10 * i}px`;
+
+      
+
+    boxes.push(div);
+    
+  }
+  return boxes
+}
+
+  
+
+
+refs.collection.append(...createBoxes());
+
+
+refs.destroyBtn.addEventListener('click', () => {
+  refs.collection.innerHTML = '';
+ });
 
 
 
