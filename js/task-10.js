@@ -22,11 +22,7 @@ const refs = {
 
 
 
-// refs.input.addEventListener('input', (event) => {
-//   let amount = event.currentTarget.value
-//  return amount
 
-// }) 
 
 
 
@@ -51,7 +47,7 @@ function createBoxes(amount)  {
     boxes.push(div);
     
   }
-  // return boxes
+  
   refs.collection.append(...boxes);
 }
 
@@ -61,7 +57,6 @@ refs.createBtn.addEventListener('click', () => {
 let boxesColection = createBoxes(refs.input.value)
 });
 
-// console.log(createBoxes(6))
 
  
 

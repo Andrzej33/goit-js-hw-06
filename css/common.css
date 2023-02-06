@@ -25,16 +25,5 @@ button {
 
 
  
-.gallery{
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  align-items: center;
-  background-color: rgb(98, 87, 146);
-  padding: 20px;
-  justify-content: center;
- }
 
-.images-03{
-  display: block;
-}
+

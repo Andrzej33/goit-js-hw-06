@@ -31,10 +31,10 @@ const galeryElList = document.querySelector(`.gallery`);
 const makeGaleryImages = properties => {
   return properties.map(property => {
 
-    return `<li><img class = "images-03" 
+    return `<li class = "images-item"><img class = "images-03" 
     src = "${property.url}" 
     alt = "${property.alt}" 
-    "width = 300" height = 200" ></img></li>`
+    width = "100%" height = "200" ></img></li>`
     
   });
   
@@ -44,9 +44,21 @@ const makeGaleryImages = properties => {
 
 const allImages = makeGaleryImages(images).join(" ");
 
-console.log(allImages)
+
 
 
 // Додаємо галерею в HTML
 
-galeryElList.insertAdjacentHTML("beforeend",allImages)
+galeryElList.insertAdjacentHTML("beforeend", allImages)
+
+
+// Додаємо до галереї css стилі
+
+galeryElList.style.display = 'flex';
+galeryElList.style.gap = '40px';
+galeryElList.style.listStyleType = 'none';
+galeryElList.style.allignItems = 'center';
+galeryElList.style.backgroundColor =
+  'rgb(98, 87, 146)'
+ galeryElList.style.padding = '20px'
+ galeryElList.style.justifyContent = 'center'
