@@ -22,17 +22,13 @@ const refs = {
 
 
 
-refs.input.addEventListener('input', () => {
-  // const number = event.currentTarget.value
-  // return number
- });
+// refs.input.addEventListener('input', (event) => {
+//   let amount = event.currentTarget.value
+//  return amount
 
-// let amount = refs.input.value;
-
+// }) 
 
 
-
-refs.createBtn.addEventListener('click',createBoxes);
 
 
 function createBoxes(amount)  {
@@ -55,19 +51,28 @@ function createBoxes(amount)  {
     boxes.push(div);
     
   }
-  return boxes
+  // return boxes
+  refs.collection.append(...boxes);
 }
 
-  
 
 
-refs.collection.append(...createBoxes());
+refs.createBtn.addEventListener('click', () => {
+let boxesColection = createBoxes(refs.input.value)
+});
+
+// console.log(createBoxes(6))
+
+ 
+
+
+
+
 
 
 refs.destroyBtn.addEventListener('click', () => {
   refs.collection.innerHTML = '';
  });
-
 
 
 
