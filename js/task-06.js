@@ -10,11 +10,13 @@ input.addEventListener("blur", onInputBlur);
 
 function onInputBlur() {
   if (input.value.length === +input.getAttribute("data-length")) {
-    input.classList.add("valid");
-    input.classList.remove("invalid");
+    // input.classList.add("valid");
+    // input.classList.remove("invalid");
+     input.classList = "valid";
   } else {
-    input.classList.add("invalid");
-    input.classList.remove("valid");
+    // input.classList.add("invalid");
+    // input.classList.remove("valid");
+    input.classList = "invalid";
   }
  
 }
