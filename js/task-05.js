@@ -12,7 +12,7 @@ inputRef.addEventListener("input", onInputTransform);
 // Використовуємо функцію з тернарним оператором для виконання завдання
 
 function onInputTransform(event) {
-  return !event.currentTarget.value
-    ? (spanRef.textContent = `Anonymous`)
-    : (spanRef.textContent = event.currentTarget.value);
+  spanRef.textContent = event.currentTarget.value
+    ? (event.currentTarget.value)
+    :  `Anonymous`;
 }
