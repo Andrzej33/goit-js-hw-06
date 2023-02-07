@@ -2,17 +2,17 @@
 
 // Створюємо посилання на необхідні теги
 
-const inputRef = document.querySelector('#name-input');
-const spanRef = document.querySelector('#name-output');
+const inputRef = document.querySelector("#name-input");
+const spanRef = document.querySelector("#name-output");
 
 // Додаємо прослуховувача подій на input
 
-
-inputRef.addEventListener('input', onInputTransform);
+inputRef.addEventListener("input", onInputTransform);
 
 // Використовуємо функцію з тернарним оператором для виконання завдання
 
 function onInputTransform(event) {
-    event.currentTarget.value ?
-    spanRef.textContent = event.currentTarget.value : spanRef.textContent = `Anonymous`;
-};
+  return !event.currentTarget.value
+    ? (spanRef.textContent = `Anonymous`)
+    : (spanRef.textContent = event.currentTarget.value);
+}

@@ -6,34 +6,30 @@
 
 // Створюємо посилання на необхідний тег форми
 
-
-const form = document.querySelector('.login-form');
+const form = document.querySelector(".login-form");
 
 // Додаємо прослуховувача подій на форму
 
-form.addEventListener('submit', onFormSubmit);
+form.addEventListener("submit", onFormSubmit);
 
 // Виносимо окремо функцію для виконання завдання
 
 function onFormSubmit(event) {
-    
-    event.preventDefault();
-    
-    
-    const formElements = event.currentTarget.elements;
-    const email = formElements.email.value;
-    const password = formElements.password.value;
+  event.preventDefault();
 
-    
-    if (password === '' || email === '') {
-        alert('всі поля форми повинні бути заповнені');
-    } else {
-        const userData = {
-            email,
-            password,
-        }
-        console.log(userData);
-        
-        event.currentTarget.reset();
-    }
+  const formElements = event.currentTarget.elements;
+  const email = formElements.email.value;
+  const password = formElements.password.value;
+
+  if (password === "" || email === "") {
+    return alert("всі поля форми повинні бути заповнені");
+  } else {
+    const userData = {
+      email,
+      password,
+    };
+    console.log(userData);
+
+    event.currentTarget.reset();
+  }
 }

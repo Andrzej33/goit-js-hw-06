@@ -5,18 +5,13 @@
 // Додасть елементу клас item.
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients
 
-
-
-
-
-
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
 // Створюємо посилання на список в HTML файлі
@@ -30,10 +25,7 @@ const ingredientsAdd = ingredients.map((ingredient) => {
   ingredientEl.classList.add(`item`);
   ingredientEl.textContent = ingredient;
   return ingredientEl;
-}
-    )
-  ;
-
+});
 // Додаємо список в HTML файл за одну операцію
 
 ingredientsList.append(...ingredientsAdd);
