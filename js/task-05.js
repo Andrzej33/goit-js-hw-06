@@ -13,6 +13,6 @@ inputRef.addEventListener("input", onInputTransform);
 
 function onInputTransform(event) {
   spanRef.textContent = event.currentTarget.value
-    ? (event.currentTarget.value)
-    :  `Anonymous`;
+    ? event.currentTarget.value
+    : `Anonymous`;
 }
